@@ -13,12 +13,14 @@
 <body>
     <?php
     require 'partials/header.php';
+
+    print_R($_POST);
     ?>
     <section class="conteudo_index">
         <div class="titulo_section_index">
             <h2>Cadastre seu produto</h2>
         </div>
-        <form>
+        <form action="cadastrar_produtos.php" method="post">
             <div class="container_formulario_pedido_bloco">
                 <input type="text" placeholder="Nome do produto">
                 <div class="container_formulario_pedido_bloco">
