@@ -14,7 +14,7 @@
     <?php
     require 'partials/header.php';
 
-    print_R($_POST);
+    print_r($_POST);
     ?>
     <section class="conteudo_index">
         <div class="titulo_section_index">
@@ -22,22 +22,22 @@
         </div>
         <form action="cadastrar_produtos.php" method="post">
             <div class="container_formulario_pedido_bloco">
-                <input type="text" placeholder="Nome do produto">
+                <input type="text" name="nome" placeholder="Nome do produto">
                 <div class="container_formulario_pedido_bloco">
-                    <textarea placeholder="Descrição do produto"></textarea>
+                    <textarea name="descricao_produto" placeholder="Descrição do produto"></textarea>
                 </div>
             </div>
             <div class="container_formulario_pedido_bloco">
-                <input type="text" placeholder="Nome do cadastrante">
-                <input type="password" placeholder="Senha do cadastrante">
+                <input type="text" name="nome_cadastrante" placeholder="Nome do cadastrante">
+                <input type="password" name="senha_cadastrante" placeholder="Senha do cadastrante">
             </div>
             <div class="container_formulario_pedido_bloco">
-                <select>
+                <select name="categoria">
                     <option>Selecione o tipo de bebida</option>
                     <option>Bebida Quente</option>
                     <option>Bebida Gelada</option>
                 </select>
-                <input type="number" placeholder="Quantidade">
+                <input type="number" name="quantidade" placeholder="Quantidade">
             </div>
             <div class="container_formulario_pedido_bloco">
                 <button type="reset"><b>Limpar</b></button>
