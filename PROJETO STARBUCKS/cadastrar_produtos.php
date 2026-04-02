@@ -13,8 +13,35 @@
 <body>
     <?php
     require 'partials/header.php';
+    require 'init.php';
 
+    print '<pre>';
     print_r($_POST);
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $ids = array_column($_SESSION['produtos'], 'id');
+        $novo_id = $ids ? max($ids) + 1 : 1;
+        // mesma coisa que: 
+        //if ($ids) {
+        //    $novo_id = max($ids) + 1;
+        //} else {
+        //    $novo_id = 1;
+        //}
+
+        $_SESSION['produtos'][] = [
+            'id' => $novo_id,
+            'nome' => $_POST['nome'],
+            'categoria' => $_POST['categoria'],
+            'preco' => $_POST['preco'],
+            'descricao_longa' => $_POST['descricao_longa'],
+            'descricao_curta' => $_POST['descricao_curta'],
+            'imagem' => $_POST['imagem']
+        ];
+    }
+    print_r($_SESSION['produtos']);
+    print '</pre>';
+
     ?>
     <section class="conteudo_index">
         <div class="titulo_section_index">
@@ -23,9 +50,17 @@
         <form action="cadastrar_produtos.php" method="post">
             <div class="container_formulario_pedido_bloco">
                 <input type="text" name="nome" placeholder="Nome do produto">
+            </div>
+            <div class="container_formulario_pedido_bloco">
                 <div class="container_formulario_pedido_bloco">
-                    <textarea name="descricao_produto" placeholder="Descrição do produto"></textarea>
+                    <textarea name="descricao_curta" placeholder="Descrição do produto curta"></textarea>
                 </div>
+                <div class="container_formulario_pedido_bloco">
+                    <textarea name="descricao_longa" placeholder="Descrição do produto longa"></textarea>
+                </div>
+            </div>
+            <div class="container_formulario_pedido_bloco">
+                <input type="text" name="preco" placeholder="Preço">
             </div>
             <div class="container_formulario_pedido_bloco">
                 <input type="text" name="nome_cadastrante" placeholder="Nome do cadastrante">
@@ -34,10 +69,13 @@
             <div class="container_formulario_pedido_bloco">
                 <select name="categoria">
                     <option>Selecione o tipo de bebida</option>
-                    <option>Bebida Quente</option>
-                    <option>Bebida Gelada</option>
+                    <option value="bebida quente">Bebida Quente</option>
+                    <option value="bebida fria">Bebida Fria</option>
                 </select>
                 <input type="number" name="quantidade" placeholder="Quantidade">
+            </div>
+            <div class="container_formulario_pedido_bloco">
+                <input type="text" name="imagem" placeholder="URL da imagem do produto">
             </div>
             <div class="container_formulario_pedido_bloco">
                 <button type="reset"><b>Limpar</b></button>

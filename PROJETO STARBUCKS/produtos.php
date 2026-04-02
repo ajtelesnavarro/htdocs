@@ -13,21 +13,25 @@
 <body>
     <?php
     include './partials/header.php';
-    require 'data.php';
+    require 'init.php';
+
+    $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
+
     ?>
     <section class="conteudo">
         <div class="lista-container">
             <ul>
                 <?php
                 foreach ($categorias as $kcat => $vcat) {
-                    print '<li><a href="#">' . $vcat . '</a></li>';
+                    print '<li><a href="produtos.php?categoria=' . $kcat . '">' . $vcat . '</a></li>';
                 }
                 ?>
             </ul>
         </div>
         <div class="produtos_populares_grid">
             <?php
-            foreach ($produtos_base as $produto) {
+            foreach ($_SESSION['produtos'] as $produto) {
+                if($categoria_get === '' || $produto['categoria'] === $categoria_get) {
                 print '
                 <a href="./detalhes_carmac.php" class="container_produtos_populares">
                 <img src="' . $produto['imagem'] . '" alt="' . $produto['nome'] . '">
@@ -36,6 +40,7 @@
                     <p>' . $produto['descricao_longa'] . '</p>
                 </div>
             </a>';
+            }
             }
             ?>
         </div>

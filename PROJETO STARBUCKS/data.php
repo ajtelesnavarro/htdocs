@@ -1,21 +1,4 @@
 <?php
-// $nome = $_POST['nome'];
-// $sobrenome = $_POST['sobrenome'];
-// $email = $_POST['email'];
-// $senha = $_POST['senha'];
-// $telefone = $_POST['telefone'];
-// $mensagem = $_POST['mensagem'];
-    
-// echo "Nome: " . $nome . "<br>";
-// echo "Sobrenome: " . $sobrenome . "<br>";
-// echo "Email: " . $email . "<br>";
-// echo "Senha: " . $senha . "<br>";
-// echo "Telefone: " . $telefone . "<br>";
-// echo "Mensagem: " . $mensagem . "<br>";
-
-?>
-
-<?php
 
 $categorias = [
     'bebidas quentes' => 'Bebidas Quentes',
