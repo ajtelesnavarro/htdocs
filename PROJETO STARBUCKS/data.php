@@ -13,20 +13,8 @@ $produtos_base = [
         'categoria' => 'bebidas quentes',
         'preco' => 19.90,
         'descricao_curta' => 'Café espresso com leite vaporizado, baunilha e calda de caramelo.',
-        'descricao_longa' => 'O Caramel Macchiato é uma bebida clássica e elegante, feita com leite vaporizado, xarope de
-                    baunilha e uma dose de espresso adicionada por cima, finalizada com uma generosa camada de calda
-                    de caramelo. Ele combina o sabor intenso do café com a doçura da baunilha e do caramelo, criando
-                    uma bebida equilibrada e cremosa.',
-        'descricao_longa2'=> 'Ao preparar, as cápsulas proporcionam uma bebida cremosa, com aroma envolvente e sabor equilibrado. A
-                    intensidade do café é suavizada pela doçura do leite e do caramelo, tornando a experiência agradável
-                    tanto para quem aprecia cafés mais leves quanto para quem busca um toque adocicado.<br><br>
-                    A acidez é baixa a média, garantindo uma bebida suave e fácil de consumir no dia a dia. Já a doçura
-                    é elevada, característica marcante do Caramel Macchiato, evidenciada pelas notas de caramelo e
-                    baunilha presentes na fórmula das cápsulas.<br><br>
-                    O corpo é médio, resultando em uma textura equilibrada e cremosa na boca. A finalização é agradável
-                    e levemente doce, com notas persistentes de caramelo que permanecem após cada gole.<br><br>
-                    No geral, as cápsulas de Caramel Macchiato são ideais para quem busca praticidade sem abrir mão de
-                    sabor, oferecendo uma bebida doce, cremosa e equilibrada com apenas um toque.',
+        'descricao_longa' => 'O Caramel Macchiato é uma bebida clássica e elegante, feita com leite vaporizado, xarope de baunilha e uma dose de espresso adicionada por cima, finalizada com uma generosa camada de calda de caramelo. Ele combina o sabor intenso do café com a doçura da baunilha e do caramelo, criando uma bebida equilibrada e cremosa.',
+        'descricao_longa2'=> 'Ao preparar, as cápsulas proporcionam uma bebida cremosa, com aroma envolvente e sabor equilibrado. A intensidade do café é suavizada pela doçura do leite e do caramelo, tornando a experiência agradável tanto para quem aprecia cafés mais leves quanto para quem busca um toque adocicado.<br><br> A acidez é baixa a média, garantindo uma bebida suave e fácil de consumir no dia a dia. Já a doçura é elevada, característica marcante do Caramel Macchiato, evidenciada pelas notas de caramelo e baunilha presentes na fórmula das cápsulas.<br><br> O corpo é médio, resultando em uma textura equilibrada e cremosa na boca. A finalização é agradável                    e levemente doce, com notas persistentes de caramelo que permanecem após cada gole.<br><br>No geral, as cápsulas de Caramel Macchiato são ideais para quem busca praticidade sem abrir mão de sabor, oferecendo uma bebida doce, cremosa e equilibrada com apenas um toque.',
         'imagem' => './IMAGENS/caramel_machiatto_foto.png'
     ],
     [
