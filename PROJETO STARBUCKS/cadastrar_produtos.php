@@ -15,9 +15,6 @@
     require 'partials/header.php';
     require 'init.php';
 
-    print '<pre>';
-    print_r($_POST);
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $ids = array_column($_SESSION['produtos'], 'id');
@@ -35,13 +32,11 @@
             'categoria' => $_POST['categoria'],
             'preco' => $_POST['preco'],
             'descricao_longa' => $_POST['descricao_longa'],
+            'descricao_longa2' => $_POST['descricao_longa2'],
             'descricao_curta' => $_POST['descricao_curta'],
             'imagem' => $_POST['imagem']
         ];
     }
-    print_r($_SESSION['produtos']);
-    print '</pre>';
-
     ?>
     <section class="conteudo_index">
         <div class="titulo_section_index">
@@ -55,16 +50,17 @@
                 <div class="container_formulario_pedido_bloco">
                     <textarea name="descricao_curta" placeholder="Descrição do produto curta"></textarea>
                 </div>
+            </div>
+            <div class="container_formulario_pedido_bloco">
                 <div class="container_formulario_pedido_bloco">
-                    <textarea name="descricao_longa" placeholder="Descrição do produto longa"></textarea>
+                    <textarea name="descricao_longa" placeholder="Descrição do produto longa antes da especificação"></textarea>
+                </div>
+                <div class="container_formulario_pedido_bloco">
+                    <textarea name="descricao_longa2" placeholder="Descrição do produto longa depois da especificação"></textarea>
                 </div>
             </div>
             <div class="container_formulario_pedido_bloco">
                 <input type="text" name="preco" placeholder="Preço">
-            </div>
-            <div class="container_formulario_pedido_bloco">
-                <input type="text" name="nome_cadastrante" placeholder="Nome do cadastrante">
-                <input type="password" name="senha_cadastrante" placeholder="Senha do cadastrante">
             </div>
             <div class="container_formulario_pedido_bloco">
                 <select name="categoria">
@@ -75,7 +71,7 @@
                 <input type="number" name="quantidade" placeholder="Quantidade">
             </div>
             <div class="container_formulario_pedido_bloco">
-                <input type="text" name="imagem" placeholder="URL da imagem do produto">
+                <input type="text" name="imagem" placeholder="URL ou caminho da imagem">
             </div>
             <div class="container_formulario_pedido_bloco">
                 <button type="reset"><b>Limpar</b></button>

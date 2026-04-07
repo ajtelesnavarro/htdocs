@@ -21,6 +21,7 @@
     <section class="conteudo">
         <div class="lista-container">
             <ul>
+                <li><a href="produtos.php">Todos</a></li>
                 <?php
                 foreach ($categorias as $kcat => $vcat) {
                     print '<li><a href="produtos.php?categoria=' . $kcat . '">' . $vcat . '</a></li>';
@@ -33,7 +34,7 @@
             foreach ($_SESSION['produtos'] as $produto) {
                 if($categoria_get === '' || $produto['categoria'] === $categoria_get) {
                 print '
-                <a href="./detalhes_carmac.php" class="container_produtos_populares">
+                <a href="produto_detalhe.php?id=' . $produto['id'] . '" class="container_produtos_populares">
                 <img src="' . $produto['imagem'] . '" alt="' . $produto['nome'] . '">
                 <div class="text_produtos_populares">
                     <h2>' . $produto['nome'] . '</h2>
