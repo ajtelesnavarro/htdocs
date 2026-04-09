@@ -121,10 +121,10 @@ header {
     border-radius: 5px;
 }
 
-.container_planilha_produtos_atencao img {
-    width: 20px;
-    margin-left: 10px;
-    vertical-align: middle;
+.texto_vermelho {
+    color: red;
+    font-weight: bold;
+    font-size: inherit;
 }
 
 .produto_especificacoes {
@@ -197,7 +197,7 @@ header {
 }
 .container_produto_especificacoes_botao:hover {
     background-color: #ededed;
-    color: #003049;
-    border: 2px solid #003049;
+    color: #f77f00;
+    border: 2px solid #f77f00;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
