@@ -38,8 +38,14 @@
                 <th>PREÇO TOTAL</th>
             </tr>
             <?php
+            $total_qtd_atual = 0;
+            $total_preco_total = 0;
+            $preco_total = 0;
             foreach ($_SESSION['produtos'] as $produto) {
                 if ($categoria_get === '' || $produto['categoria'] === $categoria_get) {
+                    $total_qtd_atual += $produto['quantidade_atual'];
+                    $preco_total = $produto['preco_unitario'] * $produto['quantidade_atual'];
+                    $total_preco_total += $preco_total;
                     if ($produto['quantidade_atual'] < $produto['quantidade_minima']) {
                         print '
                     <tr class="container_planilha_produto_dados">
@@ -48,8 +54,8 @@
                         <td>' . $produto['marca'] . '</td>
                         <td>' . $produto['quantidade_minima'] . ' UN</td>
                         <td class="texto_vermelho">' . $produto['quantidade_atual'] . ' UN</td>
-                        <td>R$' . $produto['preco_unitario'] . '</td>
-                        <td>R$' . $produto['preco_unitario'] * $produto['quantidade_atual'] . '</td>
+                        <td>R$' . number_format($produto['preco_unitario'], 2, ',', '.') . '</td>
+                        <td>R$' . number_format($preco_total, 2, ',', '.') . '</td>
                     </tr>';
                     } else {
                         print '
@@ -59,14 +65,20 @@
                         <td>' . $produto['marca'] . '</td>
                         <td>' . $produto['quantidade_minima'] . ' UN</td>
                         <td>' . $produto['quantidade_atual'] . ' UN</td>
-                        <td>R$' . $produto['preco_unitario'] . '</td>
-                        <td>R$' . $produto['preco_unitario'] * $produto['quantidade_atual'] . '</td>
+                        <td>R$' . number_format($produto['preco_unitario'], 2, ',', '.') . '</td>
+                        <td>R$' . number_format($preco_total, 2, ',', '.') . '</td>
                     </tr>';
                     }
                 }
 
             }
             ?>
+            <tr class="container_planilha_produto_rodape">
+                <td colspan="4">TOTAL</td>
+                <td><?php print $total_qtd_atual; ?> UN</td>
+                <td></td>
+                <td>R$<?php print number_format($total_preco_total, 2, ',', '.'); ?></td>
+            </tr>
         </table>
     </section>
 </body>
