@@ -11,7 +11,6 @@
     <?php
     include './partials/header.php';
     require 'init.php';
-    require 'data.php';
 
     $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
@@ -22,7 +21,7 @@
                 <li><a href="produtos.php">Todos</a></li>
                 <?php
                 foreach ($categorias as $kcat => $vcat) {
-                    print '<li><a href="produtos.php?categoria=' . $kcat . '"">' . $vcat . '</a></li>';
+                    print '<li><a href="produtos.php?categoria=' . $kcat . '">' . $vcat . '</a></li>';
                 }
                 ?>
             </ul>

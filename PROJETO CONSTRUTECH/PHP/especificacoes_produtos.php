@@ -1,48 +1,87 @@
 <?php
-require 'data.php';
 require 'init.php';
-$id = isset($_GET['id']) ? (int) ($_GET['id']) : 0;
-$ids = array_column($_SESSION['produtos'], 'id');
-$index = array_search($id, $ids);
-$produto = $_SESSION['produtos'][$index];
 
-if($index !== false) {
-    $produto = $_SESSION['produtos'][$index];
-} else {
-    print('Produto não existe!');
+$id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+$produto = &$_SESSION['produtos'][$id - 1];
+
+if (isset($_POST['delete'])) {
+    unset($_SESSION['produtos'][$id - 1]);
+    header('Location: produtos.php');
+    exit;
 }
 
-?>
-<html>
+if (isset($_POST['nome'])) {
+    $produto['nome'] = $_POST['nome'];
+    $produto['marca'] = $_POST['marca'];
+    $produto['categoria'] = $_POST['categoria'];
+    $produto['quantidade_minima'] = (int) $_POST['quantidade_minima'];
+    $produto['quantidade_atual'] = (int) $_POST['quantidade_atual'];
+    $produto['preco_unitario'] = (float) $_POST['preco_unitario'];
+    $produto['preco_total'] = $produto['preco_unitario'] * $produto['quantidade_atual'];
+    $saved = true;
+}
 
+$imagemSrc = '../IMAGENS/PRODUTOS/' . (!empty($produto['imagem']) ? $produto['imagem'] : $produto['id'] . '.png');
+$precoTotal = isset($produto['preco_total']) ? $produto['preco_total'] : ($produto['preco_unitario'] * $produto['quantidade_atual']);
+?>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>PRODUTOS</title>
+    <title>Editar Produto</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <?php
-    require_once 'partials/header.php';
-    ?>
+    <?php include 'partials/header.php'; ?>
+
     <div class="produto_especificacoes">
         <div class="container_produto_especificacoes_imagem">
-            <img src="../IMAGENS/PRODUTOS/'<?php print $produto['id']?>'.png" alt="<?php print $produto['nome']; ?>">
+            <img src="<?php echo $imagemSrc; ?>" alt="<?php echo $produto['nome']; ?>">
         </div>
+
         <div class="container_produto_especificacoes_dados">
-            <form class="conteudo">
-                <h2><?php print $produto['nome']?></h2>
-                <p><span>Marca: </span><?php print $produto['marca']?></p>
-                <p><span>Quantidade Mínima: </span><?php print $produto['quantidade_minima']?> UN</p>
-                <p><span>Quantidade Atual: </span><?php print $produto['quantidade_atual']?> UN</p>
-                <p><span>Preço Unitário: </span>R$<?php print $produto['preco_unitario']?></p>
-                <p><span>Preço Total: </span>R$<?php print $produto['preco_unitario'] * $produto['quantidade_atual']?></p>
-                <button type="submit" class="container_produto_especificacoes_botao">Enviar</button>
+            <form action="especificacoes_produtos.php?id=<?php echo $produto['id']; ?>" method="POST">
+                <h2>Editar produto</h2>
+
+                <?php if (!empty($saved)): ?>
+                    <p>Dados atualizados na sessão.</p>
+                <?php endif; ?>
+
+                <label>Nome:<br>
+                    <input type="text" name="nome" value="<?php echo $produto['nome']; ?>" required>
+                </label><br>
+
+                <label>Marca:<br>
+                    <input type="text" name="marca" value="<?php echo $produto['marca']; ?>" required>
+                </label><br>
+
+                <label>Categoria:<br>
+                    <select name="categoria" required>
+                        <option value="bruto" <?php if ($produto['categoria'] == 'bruto') echo 'selected'; ?>>Bruto</option>
+                        <option value="ferramentas" <?php if ($produto['categoria'] == 'ferramentas') echo 'selected'; ?>>Ferramentas</option>
+                        <option value="acabamento" <?php if ($produto['categoria'] == 'acabamento') echo 'selected'; ?>>Acabamento</option>
+                    </select>
+                </label><br>
+
+                <label>Quantidade Mínima:<br>
+                    <input type="number" name="quantidade_minima" value="<?php echo $produto['quantidade_minima']; ?>" min="0" required>
+                </label><br>
+
+                <label>Quantidade Atual:<br>
+                    <input type="number" name="quantidade_atual" value="<?php echo $produto['quantidade_atual']; ?>" min="0" required>
+                </label><br>
+
+                <label>Preço Unitário:<br>
+                    <input type="number" name="preco_unitario" value="<?php echo $produto['preco_unitario']; ?>" step="0.01" min="0" required>
+                </label><br>
+
+                <p>Preço Total: R$ <?php echo number_format($precoTotal, 2, ',', '.'); ?></p>
+
+                <button type="submit">Salvar</button>
+                <button type="submit" name="delete" value="1" style="margin-left: 12px;">Deletar</button>
+                <a href="produtos.php">Voltar</a>
             </form>
         </div>
-
     </div>
 </body>
-
 </html>

@@ -25,6 +25,7 @@ $produtos_base = [
         'quantidade_minima'=> 50,
         'quantidade_atual'=> 30,
         'preco_unitario'=> 25.00,
+        'preco_total' => 750.00,
         'imagem'=> '2.png',
         'categoria'=> 'ferramentas'
     ],
@@ -39,7 +40,7 @@ $produtos_base = [
         'imagem'=> '3.png',
         'categoria'=> 'acabamento'
     ]
-]
+];
 
 
 ?>
