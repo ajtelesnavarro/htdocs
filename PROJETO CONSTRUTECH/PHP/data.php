@@ -16,6 +16,7 @@ $produtos_base = [
         'preco_unitario' => 25.00,
         'preco_total' => 750.00,
         'imagem' => '1.png', 
+        'categoria'=> 'bruto'
     ],
     [
         'id'=> 2,
@@ -24,8 +25,8 @@ $produtos_base = [
         'quantidade_minima'=> 50,
         'quantidade_atual'=> 30,
         'preco_unitario'=> 25.00,
-        'preco_total'=> 750.00,
-        'imagem'=> '2.png'
+        'imagem'=> '2.png',
+        'categoria'=> 'ferramentas'
     ],
     [
         'id'=> 3,
@@ -35,7 +36,8 @@ $produtos_base = [
         'quantidade_atual'=> 180,
         'preco_unitario'=> 1.00,
         'preco_total'=> 180.00,
-        'imagem'=> '3.png'
+        'imagem'=> '3.png',
+        'categoria'=> 'acabamento'
     ]
 ]
 

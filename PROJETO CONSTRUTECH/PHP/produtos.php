@@ -1,7 +1,3 @@
-<?php
-require 'data.php';
-?>
-
 <html>
 
 <head>
@@ -14,6 +10,8 @@ require 'data.php';
 <body>
     <?php
     include './partials/header.php';
+    require 'init.php';
+    require 'data.php';
 
     $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
@@ -40,31 +38,31 @@ require 'data.php';
                 <th>PREÇO TOTAL</th>
             </tr>
             <?php
-            foreach ($produtos_base as $produto) {
+            foreach ($_SESSION['produtos'] as $produto) {
                 if ($categoria_get === '' || $produto['categoria'] === $categoria_get) {
                     if ($produto['quantidade_atual'] < $produto['quantidade_minima']) {
                         print '
                     <tr class="container_planilha_produto_dados">
                         <td>' . $produto['id'] . '</td>
-                        <td><a href="#">' . $produto['nome'] . '</a></td>
+                        <td><a href="especificacoes_produtos.php?id='. $produto['id'] . '">' . $produto['nome'] . '</a></td>
                         <td>' . $produto['marca'] . '</td>
-                        <td>' . $produto['quantidade_minima'] . '</td>
-                        <td class="texto_vermelho">' . $produto['quantidade_atual'] . '</td>
-                        <td>' . $produto['preco_unitario'] . '</td>
-                        <td>' . $produto['preco_total'] . '</td>
+                        <td>' . $produto['quantidade_minima'] . ' UN</td>
+                        <td class="texto_vermelho">' . $produto['quantidade_atual'] . ' UN</td>
+                        <td>R$' . $produto['preco_unitario'] . '</td>
+                        <td>R$' . $produto['preco_unitario'] * $produto['quantidade_atual'] . '</td>
                     </tr>';
                     } else {
                         print '
                     <tr class="container_planilha_produto_dados">
                         <td>' . $produto['id'] . '</td>
-                        <td><a href="#">' . $produto['nome'] . '</a></td>
+                        <td><a href="especificacoes_produtos.php?id='. $produto['id'] . '">' . $produto['nome'] . '</a></td>
                         <td>' . $produto['marca'] . '</td>
-                        <td>' . $produto['quantidade_minima'] . '</td>
-                        <td>' . $produto['quantidade_atual'] . '</td>
-                        <td>' . $produto['preco_unitario'] . '</td>
-                        <td>' . $produto['preco_total'] . '</td>
+                        <td>' . $produto['quantidade_minima'] . ' UN</td>
+                        <td>' . $produto['quantidade_atual'] . ' UN</td>
+                        <td>R$' . $produto['preco_unitario'] . '</td>
+                        <td>R$' . $produto['preco_unitario'] * $produto['quantidade_atual'] . '</td>
                     </tr>';
-                    }COMEÇAR DAQUI ALOU DEU ERRO NA UNDEFINED KEY OMO CONSERTA AAAAAAAAA
+                    }
                 }
 
             }
