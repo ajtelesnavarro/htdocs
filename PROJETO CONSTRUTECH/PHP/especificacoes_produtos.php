@@ -47,15 +47,15 @@ $precoTotal = isset($produto['preco_total']) ? $produto['preco_total'] : ($produ
                     <p>Dados atualizados na sessão.</p>
                 <?php endif; ?>
 
-                <label>Nome:<br>
+                <label><p class="container_produto_especificacoes_text">Nome:</p><br>
                     <input type="text" name="nome" value="<?php echo $produto['nome']; ?>" required>
                 </label><br>
 
-                <label>Marca:<br>
+                <label><p class="container_produto_especificacoes_text">Marca:</p><br>
                     <input type="text" name="marca" value="<?php echo $produto['marca']; ?>" required>
                 </label><br>
 
-                <label>Categoria:<br>
+                <label><p class="container_produto_especificacoes_text">Categoria:</p><br>
                     <select name="categoria" required>
                         <option value="bruto" <?php if ($produto['categoria'] == 'bruto') echo 'selected'; ?>>Bruto</option>
                         <option value="ferramentas" <?php if ($produto['categoria'] == 'ferramentas') echo 'selected'; ?>>Ferramentas</option>
@@ -63,22 +63,22 @@ $precoTotal = isset($produto['preco_total']) ? $produto['preco_total'] : ($produ
                     </select>
                 </label><br>
 
-                <label>Quantidade Mínima:<br>
+                <label><p class="container_produto_especificacoes_text">Quantidade Mínima:</p><br>
                     <input type="number" name="quantidade_minima" value="<?php echo $produto['quantidade_minima']; ?>" min="0" required>
                 </label><br>
 
-                <label>Quantidade Atual:<br>
+                <label><p class="container_produto_especificacoes_text">Quantidade Atual:</p><br>
                     <input type="number" name="quantidade_atual" value="<?php echo $produto['quantidade_atual']; ?>" min="0" required>
                 </label><br>
 
-                <label>Preço Unitário:<br>
+                <label><p class="container_produto_especificacoes_text">Preço Unitário:</p><br>
                     <input type="number" name="preco_unitario" value="<?php echo $produto['preco_unitario']; ?>" step="0.01" min="0" required>
                 </label><br>
 
-                <p>Preço Total: R$ <?php echo number_format($precoTotal, 2, ',', '.'); ?></p>
+                <p class="container_produto_especificacoes_text">Preço Total: <span>R$ <?php echo number_format($precoTotal, 2, ',', '.'); ?></span></p><br>
 
                 <button type="submit">Salvar</button>
-                <button type="submit" name="delete" value="1" style="margin-left: 12px;">Deletar</button>
+                <button type="submit" name="delete" value="1" style="margin-left: 12px;">Deletar</button><br><br>
                 <a href="produtos.php">Voltar</a>
             </form>
         </div>

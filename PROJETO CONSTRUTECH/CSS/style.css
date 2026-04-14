@@ -15,9 +15,10 @@ header {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.container_nav_logo img{
+.container_nav_logo img {
     width: 100px;
 }
+
 .container_nav_logo {
     margin-left: 20px;
 }
@@ -26,12 +27,14 @@ header {
     display: flex;
     margin-right: 20px;
 }
-.container_nav_menu ul{
+
+.container_nav_menu ul {
     display: flex;
     gap: 50px;
     flex-direction: row;
     list-style: none;
 }
+
 .container_nav_menu li {
     display: flex;
     justify-content: center;
@@ -41,6 +44,7 @@ header {
     border-radius: 15px;
     min-width: 200px;
 }
+
 .container_nav_menu a {
     color: white;
     text-decoration: none;
@@ -57,13 +61,14 @@ header {
     margin-top: 15px;
 }
 
-.container_conteudo_filtros ul{
+.container_conteudo_filtros ul {
     display: flex;
     gap: 20px;
     flex-direction: row;
     list-style: none;
 }
-.container_conteudo_filtros li{
+
+.container_conteudo_filtros li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +77,7 @@ header {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
+
 .container_conteudo_filtros a {
     color: white;
     text-decoration: none;
@@ -83,7 +89,8 @@ header {
     margin-top: 20px;
 }
 
-.container_conteudo_planilha_produto th, .container_planilha_produto_rodape td {
+.container_conteudo_planilha_produto th,
+.container_planilha_produto_rodape td {
     background-color: #fcbf49;
     padding: 10px;
     font-size: 22px;
@@ -94,7 +101,8 @@ header {
     text-align: center;
 }
 
-.container_planilha_produto_dados td, .container_planilha_movimentacao_produto_dados td {
+.container_planilha_produto_dados td,
+.container_planilha_movimentacao_produto_dados td {
     background-color: #f6e3a2;
     padding: 10px;
     font-size: 18px;
@@ -135,6 +143,7 @@ header {
     justify-content: center;
     align-items: stretch;
     margin-top: 40px;
+    margin-bottom: 40px;
     gap: 30px;
 }
 
@@ -162,12 +171,14 @@ header {
     font-weight: bolder;
     text-align: center;
 }
+
 .container_produto_especificacoes_dados p {
     font-family: 'Noto Sans', sans-serif;
     font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
 .container_produto_especificacoes_dados span {
     font-weight: bold;
 }
@@ -198,6 +209,7 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .container_produto_especificacoes_botao:hover {
     background-color: #ededed;
     color: #f77f00;
@@ -213,13 +225,13 @@ header {
     padding: 70px;
     box-sizing: border-box;
     border-radius: 25px;
-    margin: 120px auto; 
+    margin: 120px auto;
     box-shadow: 8px 6px 10px rgba(128, 128, 128, 0.555);
 }
 
 /* Titulo aba cadastro */
 
-.titulo_cad{
+.titulo_cad {
     color: white;
     font-size: 59px;
 }
@@ -259,7 +271,6 @@ header {
 .formcad {
     justify-content: center;
     display: flex;
-    display: flex;
     flex-direction: column;
     gap: 27px;
     width: 120%;
@@ -282,10 +293,71 @@ header {
 }
 
 .formcad input:focus {
-    border-color:#f6e3a2;
+    border-color: #f6e3a2;
     outline: none;
 }
 
 .formcad input::placeholder {
     color: #9e9a9a;
+}
+
+
+.container_produto_especificacoes_dados input,
+.container_produto_especificacoes_dados select {
+    width: 250px;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #003049;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.25);
+}
+
+.container_produto_especificacoes_dados button {
+    margin: 0 auto;
+    padding: 10px;
+    width: 120px;
+    border-radius: 8px;
+    border: 1px solid #003049;
+    background-color: #003049;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+}
+
+.container_produto_especificacoes_dados button:hover {
+    padding: 10px;
+    width: 120px;
+    border-radius: 8px;
+    border: 1px solid #003049;
+    background-color: #ffffff;
+    color: #003049;
+    font-family: 'Noto Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container_produto_especificacoes_text p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.container_produto_especificacoes_dados label {
+    padding: 0;
+    margin: 0;
+}
+
+.container_produto_especificacoes_dados a {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 15px;
+    color: #003049;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: left;
+    text-align: left;
 }
