@@ -60,9 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <article class="cadbox">
                 <!--Formulário-->
 
-                <form class="formcad" action="cadastrar_produtos.php" method="POST" enctype="multipart/form-data">
+                <form class="container_fornecedores_especificacoes_dados" action="cadastrar_produtos.php" method="POST" enctype="multipart/form-data">
 
-                    <h1 class="titulo_cad">Cadastro de Produtos</h1>
+                    <h2>Cadastro de Produtos</h2>
 
                     <input type="text" placeholder="Nome" name="nome" required />
 
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
                     <!--Botão de cadastro-->
-                    <button type="submit" class="buttoncad2" href="#">Envie</button>
+                    <button type="submit" class="buttoncad2" href="#">Enviar</button>
 
                 </form>
             </article>

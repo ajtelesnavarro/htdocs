@@ -163,7 +163,7 @@ header {
     justify-content: center;
 }
 
-.container_produto_especificacoes_dados h2 {
+.container_produto_especificacoes_dados h2, .container_fornecedores_especificacoes_dados h2 {
     font-family: 'Noto Sans', sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
@@ -194,6 +194,21 @@ header {
     justify-content: center;
 }
 
+.container_fornecedores_especificacoes_dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.container_fornecedores_especificacoes_dados input,
+.container_fornecedores_especificacoes_dados select {
+    width: 100%;
+    max-width: 400px;
+}
+
 .container_produto_especificacoes_botao {
     margin-top: 10px;
     padding: 12px;
@@ -221,12 +236,15 @@ header {
 .cadbox {
     width: 600px;
     height: 840px;
-    background-color: #6d8ca9ff;
+    background-color: #f6e3a2;
     padding: 70px;
     box-sizing: border-box;
     border-radius: 25px;
     margin: 120px auto;
     box-shadow: 8px 6px 10px rgba(128, 128, 128, 0.555);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Titulo aba cadastro */
@@ -238,12 +256,13 @@ header {
 
 /*Botão de enviar*/
 .buttoncad2 {
-    font-family: "Outfit", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
     justify-content: center;
     border: none;
     outline: none;
     cursor: pointer;
-    width: 100%;
+    width: 150px;
     height: 45px;
     text-align: center;
     background-color: #003049;
@@ -253,18 +272,21 @@ header {
 }
 
 .buttoncad2:hover {
-    font-family: "Outfit", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
     justify-content: center;
     border: none;
     outline: none;
     cursor: pointer;
-    width: 100%;
+    width: 150px;
     height: 45px;
     text-align: center;
-    background-color: #062435;
-    color: white;
+    background-color: white;
+    border: 2px solid #003049;
+    color: #003049;
     font-size: 18px;
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*Formulário*/
@@ -303,9 +325,11 @@ header {
 
 
 .container_produto_especificacoes_dados input,
-.container_produto_especificacoes_dados select {
+.container_produto_especificacoes_dados select,
+.container_fornecedores_especificacoes_dados input,
+.container_fornecedores_especificacoes_dados select {
     width: 250px;
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
     border: 1px solid #003049;
     border-radius: 8px;
@@ -359,5 +383,12 @@ header {
     font-size: 18px;
     font-weight: bold;
     justify-content: left;
+    text-align: left;
+}
+
+
+.container_produto_especificacoes_texto {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 3000px;
     text-align: left;
 }

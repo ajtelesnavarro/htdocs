@@ -9,6 +9,7 @@
             <ul>
                 <li><a href="./produtos.php">PRODUTOS</a></li>
                 <li><a href="./cadastrar_produtos.php">CADASTRAR PRODUTOS</a></li>
+                <li><a href="./fornecedores.php">FORNECEDORES</a></li>
             </ul>
         </div>
     </nav>
