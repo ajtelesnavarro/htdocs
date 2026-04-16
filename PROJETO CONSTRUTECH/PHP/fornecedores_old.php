@@ -51,20 +51,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <main>
 
-        <?php
-        ?>
         <section class="conteudo">
-            <div class="fornecedores_grid">
-                <div class="container_fornecedores">
-                    <a href="#" class="container_fornecedores_dados">
-                        <h2 class="container_fornecedores_nome">Votorantim</h2>
-                        <h3 class="container_fornecedores_cnpj">01.234.567/0001-89</h3>
-                        <p class="container_fornecedores_linha">_____________________</p>
-                    </a>
-                    <a href="#">
-                        <p>Link de Rastreio</p>
-                    </a>
-                </div>
+            <table class="container_conteudo_planilha_produto">
+                <tr class="container_planilha_produto_especificações">
+                    <th>FORNECEDOR</th>
+                    <th>ESPECIALIDADE</th>
+                    <th>MARCAS PRINCIPAIS</th>
+                    <th>TROCAS/DEVOLUÇÕES</th>
+                    <th>PRAZO DE ENTREGA</th>
+                    <th>LINK DE RASTREIO</th>
+                </tr>
+                <?php
+                foreach ($_SESSION['fornecedores'] as $fornecedor) {
+
+                    if (isset($_SESSION['fornecedores']) && !empty($_SESSION['fornecedores'])) {
+                        print '<tr class="container_planilha_produto_dados">
+                
+            <td><a href="detalhe_fornecedor.php?id=' . $fornecedor['id_2'] . '">' . $fornecedor['fornecedor'] . '</a></td>
+            <td>' . $fornecedor['especialidade'] . '</td>
+            <td>' . $fornecedor['marca_principal'] . '</td>
+            <td>' . $fornecedor['troca_devolucao'] . '</td>
+            <td>' . $fornecedor['prazo_entrega'] . '</td>
+            <td><a href="https://rastreamento.correios.com.br/app/index.php" target="blanck">Link Entrega</a></td>
+        </tr>';
+                    }
+
+                }
+                ;
+
+                ?>
+
+            </table>
         </section>
     </main>
 </body>

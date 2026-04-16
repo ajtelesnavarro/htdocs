@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    include './partials/header.php';
+    require_once 'partials/header.php';
     require 'init.php';
 
     $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';

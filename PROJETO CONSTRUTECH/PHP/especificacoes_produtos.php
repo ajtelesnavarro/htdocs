@@ -32,7 +32,9 @@ $precoTotal = isset($produto['preco_total']) ? $produto['preco_total'] : ($produ
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <?php include 'partials/header.php'; ?>
+    <?php
+    require_once 'partials/header.php';
+    ?>
 
     <div class="produto_especificacoes">
         <div class="container_produto_especificacoes_imagem">
