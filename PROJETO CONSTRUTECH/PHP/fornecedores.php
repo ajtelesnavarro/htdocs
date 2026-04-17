@@ -1,7 +1,7 @@
 <?php
 require_once './init.php';
 
-$categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
+$categoria_get = isset($_GET['especialidade']) ? trim($_GET['especialidade']) : '';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -56,17 +56,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <section class="conteudo">
             <div class="container_conteudo_filtros">
                 <ul>
-                    <li><a href="produtos.php">Todos</a></li>
+                    <li><a href="fornecedores.php">Todos</a></li>
                     <?php
                     foreach ($categorias_fornecedores as $kcatfor => $vcatfor) {
-                        print '<li><a href="detalhe_fornecedor.php?categoria=' . $kcatfor . '">' . $vcatfor . '</a></li>';
+                        print '<li><a href="fornecedores.php?especialidade=' . $kcatfor . '">' . $vcatfor . '</a></li>';
                     }
                     ?>
                 </ul>
             </div>
             <div class="fornecedores_grid">
-                    <?php
-                    foreach ($_SESSION['fornecedores'] as $fornecedor) {
+                <?php
+                foreach ($_SESSION['fornecedores'] as $fornecedor) {
+                    if ($categoria_get === '' ||strtolower(trim($fornecedor['especialidade'])) === strtolower(trim($categoria_get))){
                         print '<div class="container_fornecedores">
                         <a href="detalhe_fornecedor.php?id=' . $fornecedor['id_2'] . '" class="container_fornecedores_dados">
                         <h2>' . $fornecedor['fornecedor'] . '</h2>
@@ -79,8 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </a>
                     </div>';
                     }
-                    ?>
-                </div>
+                }
+                ?>
+            </div>
         </section>
     </main>
 </body>
