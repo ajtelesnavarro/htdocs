@@ -13,39 +13,343 @@ $categorias_fornecedores = [
 ];
 
 $produtos_base = [
+
+    // ================= BRUTO (1-10) =================
     [
         'id' => 1,
-        'nome' => 'Martelo',
-        'marca' => 'Portland',
-        'quantidade_minima' => 30,
-        'quantidade_atual' => 50,
-        'preco_unitario' => 25.00,
-        'preco_total' => 750.00,
+        'nome' => 'Areia Média',
+        'marca' => 'Local',
+        'quantidade_minima' => 50,
+        'quantidade_atual' => 80,
+        'preco_unitario' => 120.00,
+        'preco_total' => 9600.00,
         'imagem' => '1.png',
         'categoria' => 'bruto'
     ],
     [
         'id' => 2,
-        'nome' => 'Cimento',
-        'marca' => 'Portland',
-        'quantidade_minima' => 50,
-        'quantidade_atual' => 30,
-        'preco_unitario' => 25.00,
-        'preco_total' => 750.00,
+        'nome' => 'Brita 1',
+        'marca' => 'Pedreira SP',
+        'quantidade_minima' => 40,
+        'quantidade_atual' => 60,
+        'preco_unitario' => 150.00,
+        'preco_total' => 9000.00,
         'imagem' => '2.png',
-        'categoria' => 'ferramentas'
+        'categoria' => 'bruto'
     ],
     [
         'id' => 3,
-        'nome' => 'Tijolo',
-        'marca' => 'Cerâmica',
-        'quantidade_minima' => 200,
-        'quantidade_atual' => 180,
-        'preco_unitario' => 1.00,
-        'preco_total' => 180.00,
+        'nome' => 'Cimento CP II',
+        'marca' => 'Votorantim',
+        'quantidade_minima' => 100,
+        'quantidade_atual' => 90,
+        'preco_unitario' => 30.00,
+        'preco_total' => 2700.00,
         'imagem' => '3.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 4,
+        'nome' => 'Tijolo Baiano',
+        'marca' => 'Cerâmica Forte',
+        'quantidade_minima' => 500,
+        'quantidade_atual' => 450,
+        'preco_unitario' => 0.90,
+        'preco_total' => 405.00,
+        'imagem' => '4.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 5,
+        'nome' => 'Bloco de Concreto',
+        'marca' => 'Blocos SP',
+        'quantidade_minima' => 300,
+        'quantidade_atual' => 350,
+        'preco_unitario' => 2.50,
+        'preco_total' => 875.00,
+        'imagem' => '5.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 6,
+        'nome' => 'Cal Hidratada',
+        'marca' => 'Itaú',
+        'quantidade_minima' => 60,
+        'quantidade_atual' => 70,
+        'preco_unitario' => 18.00,
+        'preco_total' => 1260.00,
+        'imagem' => '6.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 7,
+        'nome' => 'Vergalhão 10mm',
+        'marca' => 'Gerdau',
+        'quantidade_minima' => 80,
+        'quantidade_atual' => 100,
+        'preco_unitario' => 45.00,
+        'preco_total' => 4500.00,
+        'imagem' => '7.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 8,
+        'nome' => 'Vergalhão 8mm',
+        'marca' => 'Gerdau',
+        'quantidade_minima' => 70,
+        'quantidade_atual' => 60,
+        'preco_unitario' => 35.00,
+        'preco_total' => 2100.00,
+        'imagem' => '8.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 9,
+        'nome' => 'Argamassa AC1',
+        'marca' => 'Quartzolit',
+        'quantidade_minima' => 50,
+        'quantidade_atual' => 65,
+        'preco_unitario' => 28.00,
+        'preco_total' => 1820.00,
+        'imagem' => '9.png',
+        'categoria' => 'bruto'
+    ],
+    [
+        'id' => 10,
+        'nome' => 'Concreto Ensacado',
+        'marca' => 'Votorantim',
+        'quantidade_minima' => 40,
+        'quantidade_atual' => 55,
+        'preco_unitario' => 32.00,
+        'preco_total' => 1760.00,
+        'imagem' => '10.png',
+        'categoria' => 'bruto'
+    ],
+
+    // ================= FERRAMENTAS (11-20) =================
+    [
+        'id' => 11,
+        'nome' => 'Martelo',
+        'marca' => 'Tramontina',
+        'quantidade_minima' => 20,
+        'quantidade_atual' => 30,
+        'preco_unitario' => 40.00,
+        'preco_total' => 1200.00,
+        'imagem' => '11.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 12,
+        'nome' => 'Chave de Fenda',
+        'marca' => 'Bosch',
+        'quantidade_minima' => 25,
+        'quantidade_atual' => 35,
+        'preco_unitario' => 15.00,
+        'preco_total' => 525.00,
+        'imagem' => '12.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 13,
+        'nome' => 'Furadeira',
+        'marca' => 'Makita',
+        'quantidade_minima' => 15,
+        'quantidade_atual' => 12,
+        'preco_unitario' => 250.00,
+        'preco_total' => 3000.00,
+        'imagem' => '13.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 14,
+        'nome' => 'Serrote',
+        'marca' => 'Tramontina',
+        'quantidade_minima' => 15,
+        'quantidade_atual' => 12,
+        'preco_unitario' => 35.00,
+        'preco_total' => 700.00,
+        'imagem' => '14.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 15,
+        'nome' => 'Alicate',
+        'marca' => 'Vonder',
+        'quantidade_minima' => 50,
+        'quantidade_atual' => 32,
+        'preco_unitario' => 28.00,
+        'preco_total' => 700.00,
+        'imagem' => '15.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 16,
+        'nome' => 'Trena 5m',
+        'marca' => 'Stanley',
+        'quantidade_minima' => 15,
+        'quantidade_atual' => 18,
+        'preco_unitario' => 22.00,
+        'preco_total' => 396.00,
+        'imagem' => '16.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 17,
+        'nome' => 'Nível',
+        'marca' => 'Bosch',
+        'quantidade_minima' => 10,
+        'quantidade_atual' => 15,
+        'preco_unitario' => 55.00,
+        'preco_total' => 825.00,
+        'imagem' => '17.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 18,
+        'nome' => 'Parafusadeira',
+        'marca' => 'Makita',
+        'quantidade_minima' => 8,
+        'quantidade_atual' => 10,
+        'preco_unitario' => 300.00,
+        'preco_total' => 3000.00,
+        'imagem' => '18.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 19,
+        'nome' => 'Espátula',
+        'marca' => 'Atlas',
+        'quantidade_minima' => 30,
+        'quantidade_atual' => 40,
+        'preco_unitario' => 12.00,
+        'preco_total' => 480.00,
+        'imagem' => '19.png',
+        'categoria' => 'ferramentas'
+    ],
+    [
+        'id' => 20,
+        'nome' => 'Desempenadeira',
+        'marca' => 'Vonder',
+        'quantidade_minima' => 25,
+        'quantidade_atual' => 22,
+        'preco_unitario' => 18.00,
+        'preco_total' => 540.00,
+        'imagem' => '20.png',
+        'categoria' => 'ferramentas'
+    ],
+
+    // ================= ACABAMENTO (21-30) =================
+    [
+        'id' => 21,
+        'nome' => 'Piso Cerâmico',
+        'marca' => 'Portobello',
+        'quantidade_minima' => 100,
+        'quantidade_atual' => 120,
+        'preco_unitario' => 35.00,
+        'preco_total' => 4200.00,
+        'imagem' => '21.png',
         'categoria' => 'acabamento'
-    ]
+    ],
+    [
+        'id' => 22,
+        'nome' => 'Azulejo',
+        'marca' => 'Eliane',
+        'quantidade_minima' => 80,
+        'quantidade_atual' => 90,
+        'preco_unitario' => 28.00,
+        'preco_total' => 2520.00,
+        'imagem' => '22.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 23,
+        'nome' => 'Tinta Acrílica',
+        'marca' => 'Suvinil',
+        'quantidade_minima' => 40,
+        'quantidade_atual' => 50,
+        'preco_unitario' => 120.00,
+        'preco_total' => 6000.00,
+        'imagem' => '23.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 24,
+        'nome' => 'Massa Corrida',
+        'marca' => 'Coral',
+        'quantidade_minima' => 30,
+        'quantidade_atual' => 45,
+        'preco_unitario' => 60.00,
+        'preco_total' => 2700.00,
+        'imagem' => '24.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 25,
+        'nome' => 'Rejunte',
+        'marca' => 'Quartzolit',
+        'quantidade_minima' => 50,
+        'quantidade_atual' => 65,
+        'preco_unitario' => 15.00,
+        'preco_total' => 975.00,
+        'imagem' => '25.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 26,
+        'nome' => 'Rodapé',
+        'marca' => 'Duratex',
+        'quantidade_minima' => 60,
+        'quantidade_atual' => 53,
+        'preco_unitario' => 20.00,
+        'preco_total' => 1400.00,
+        'imagem' => '26.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 27,
+        'nome' => 'Porta de Madeira',
+        'marca' => 'Pormade',
+        'quantidade_minima' => 10,
+        'quantidade_atual' => 8,
+        'preco_unitario' => 350.00,
+        'preco_total' => 4200.00,
+        'imagem' => '27.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 28,
+        'nome' => 'Janela Alumínio',
+        'marca' => 'Sasazaki',
+        'quantidade_minima' => 8,
+        'quantidade_atual' => 10,
+        'preco_unitario' => 450.00,
+        'preco_total' => 4500.00,
+        'imagem' => '28.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 29,
+        'nome' => 'Verniz',
+        'marca' => 'Sparlack',
+        'quantidade_minima' => 20,
+        'quantidade_atual' => 25,
+        'preco_unitario' => 55.00,
+        'preco_total' => 1375.00,
+        'imagem' => '29.png',
+        'categoria' => 'acabamento'
+    ],
+    [
+        'id' => 30,
+        'nome' => 'Selador',
+        'marca' => 'Coral',
+        'quantidade_minima' => 40,
+        'quantidade_atual' => 30,
+        'preco_unitario' => 70.00,
+        'preco_total' => 2100.00,
+        'imagem' => '30.png',
+        'categoria' => 'acabamento'
+    ],
+
 ];
 
 
