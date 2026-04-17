@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         href="https://fonts.googleapis.com/css2?family=Electrolize&family=Outfit:wght@100..900&family=Palette+Mosaic&family=Wellfleet&display=swap"
         rel="stylesheet">
     <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="../CSS/style.CSS">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
@@ -54,16 +54,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php
         ?>
         <section class="conteudo">
+            <div class="container_conteudo_filtros">
+                <ul>
+                    <li><a href="produtos.php">Todos</a></li>
+                    <?php
+                    foreach ($categorias_fornecedores as $kcatfor => $vcatfor) {
+                        print '<li><a href="detalhe_fornecedor.php?categoria=' . $kcatfor . '">' . $vcatfor . '</a></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
             <div class="fornecedores_grid">
-                <div class="container_fornecedores">
-                    <a href="#" class="container_fornecedores_dados">
-                        <h2 class="container_fornecedores_nome">Votorantim</h2>
-                        <h3 class="container_fornecedores_cnpj">01.234.567/0001-89</h3>
+                    <?php
+                    foreach ($_SESSION['fornecedores'] as $fornecedor) {
+                        print '<div class="container_fornecedores">
+                        <a href="detalhe_fornecedor.php?id=' . $fornecedor['id_2'] . '" class="container_fornecedores_dados">
+                        <h2>' . $fornecedor['fornecedor'] . '</h2>
+                        <h3>' . $fornecedor['marca_principal'] . '</h3>
+                        <h3>' . $fornecedor['cnpj'] . '</h3>
                         <p class="container_fornecedores_linha">_____________________</p>
                     </a>
-                    <a href="#">
+                    <a href="#" class="container_fornecedores_rastreio">
                         <p>Link de Rastreio</p>
                     </a>
+                    </div>';
+                    }
+                    ?>
                 </div>
         </section>
     </main>

@@ -6,6 +6,12 @@ $categorias = [
     'acabamento' => 'Acabamento',
 ];
 
+$categorias_fornecedores = [
+    'base_estrutura' => 'Base e Estrutura',
+    'hidraulica_esgoto' => 'Hidráulica e Esgoto',
+    'revestimentos' => 'Revestimentos',
+];
+
 $produtos_base = [
     [
         'id' => 1,
