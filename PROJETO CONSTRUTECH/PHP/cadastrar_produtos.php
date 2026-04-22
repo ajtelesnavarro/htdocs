@@ -60,20 +60,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <article class="cadbox">
                 <!--Formulário-->
 
-                <form class="container_fornecedores_especificacoes_dados" action="cadastrar_produtos.php" method="POST" enctype="multipart/form-data">
+                <form class="container_fornecedores_especificacoes_dados" action="cadastrar_produtos.php" method="POST"
+                    enctype="multipart/form-data">
 
                     <h2>Cadastro de Produtos</h2>
 
                     <input type="text" placeholder="Nome" name="nome" required />
+                    <div class="grid_cadproduto">
+                        <select class="selecionar" name="categoria">
+                            <option value="" disabled selected>Categoria</option>
+                            <option value="bruto">Bruto</option>
+                            <option value="ferramentas">Ferramentas</option>
+                            <option value="acabamento">Acabamento</option>
+                        </select>
+                        <input type="number" placeholder="Quantidade Minima" name="quantidade_minima" required
+                            min="1" />
+                    </div>
 
-                    <select class="selecionar" name="categoria">
-                        <option value="" disabled selected>Categoria</option>
-                        <option value="bruto">Bruto</option>
-                        <option value="ferramentas">Ferramentas</option>
-                        <option value="acabamento">Acabamento</option>
-                    </select>
-                    <input type="number" placeholder="Quantidade Minima" name="quantidade_minima" required min="1" />
-                    <input type="number" placeholder="Quantidade" name="quantidade_atual" required min="1" />
+                    <input type="number" placeholder="Quantidade Atual" name="quantidade_atual" required min="1" />
                     <input type="text" placeholder="Marca" name="marca" required />
                     <input type="number" placeholder="Preco Unitário" name="preco_unitario" required min="1" />
                     <input type="file" name="imagem" accept="image/*" required />

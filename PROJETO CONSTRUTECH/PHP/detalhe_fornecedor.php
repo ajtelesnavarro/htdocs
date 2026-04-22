@@ -38,58 +38,94 @@ if ($index !== false) {
     ?>
 
 
-    <main>
-        <section>
-            <article>
-                <div class="produto_especificacoes">
+    <main class="conteudo_fornecedor">
+        <form action="detalhe_fornecedor.php?id=<?php echo $fornecedor['id_2']; ?>" method="POST"></form>
+        <h1 class="titulo_fornecedor">Detalhe do fornecedor: <?php echo $fornecedor['fornecedor']; ?> </h1>
+        <div class="mini-grid">
+            <section class="card">
+                <div class="grid-title">
+                    <h3>Informações Básicas:</h3>
+                </div>
 
+                <div class="grid-info">
 
-                    <div class="container_produto_especificacoes_dados">
-                        <form action="detalhe_fornecedor.php?id=<?php echo $fornecedor['id_2']; ?>" method="POST">
-                            <h2>Sobre o Fornecedor:</h2>
-                            <label>
-                                <p class="container_produto_especificacoes_text">Nome do Consultor/Vendedor:</p><br>
-                                <h2 class="container_produto_especificacoes_text">
-                                    <?php echo $fornecedor['nome_consultor']; ?></h2>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/marcas.png" class="img_fornecedor" />
+                        <p> <span>Marcas principais:</span> <?php echo $fornecedor['marca_principal']; ?></p>
+                    </div>
 
-                                <br>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/razao_social.png" class="img_fornecedor" />
+                        <p> <span>Razão social:</span> <?php echo $fornecedor['razao_social']; ?></p>
+                    </div>
 
-                                <p class="container_produto_especificacoes_text">WhatsApp/Telefone Comercial:</p><br>
-                                <h2 class="container_produto_especificacoes_text"><?php echo $fornecedor['contato']; ?>
-                                </h2>
-                            </label><br>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/cnpj.png" class="img_fornecedor" />
+                        <p> <span>CNPJ:</span> <?php echo $fornecedor['cnpj']; ?></p>
+                    </div>
 
-                            <p class="container_produto_especificacoes_text">E-mail de Pedidos:</p><br>
-                            <h2 class="container_produto_especificacoes_text"><?php echo $fornecedor['email']; ?></h2>
-                            </label><br>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/endereco.png" class="img_fornecedor" />
+                        <p> <span>Endereço:</span> <?php echo $fornecedor['endereco']; ?></p>
+                    </div>
 
-                            <p class="container_produto_especificacoes_text">CNPJ:</p><br>
-                            <h2 class="container_produto_especificacoes_text"><?php echo $fornecedor['cnpj']; ?></h2>
-                            </label><br>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/nome.png" class="img_fornecedor" />
+                        <p> <span>Vendedor:</span> <?php echo $fornecedor['nome_consultor']; ?></p>
+                    </div>
 
-                            <p class="container_produto_especificacoes_text">Condições de Pagamento:</p><br>
-                            <h2 class="container_produto_especificacoes_texto">
-                                <?php echo $fornecedor['pagamento_condicacao']; ?></h2>
-                            </label><br>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/email_pedido.png" class="img_fornecedor" />
+                        <p> <span>E-mail:</span> <?php echo $fornecedor['email']; ?></p>
+                    </div>
 
-                            <p class="container_produto_especificacoes_text">Pedido Mínimo:</p><br>
-                            <h2 class="container_produto_especificacoes_text"><?php echo $fornecedor['pedido_min']; ?>
-                            </h2>
-                            </label><br>
-
-                            <p class="container_produto_especificacoes_text">Confiabilidade:</p><br>
-                            <h2 class="container_produto_especificacoes_text">
-                                <?php echo $fornecedor['confiabilidade']; ?></h2>
-                            </label><br>
-
-                            <a href="fornecedores.php">Voltar</a>
-                        </form>
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/comercial.png" class="img_fornecedor" />
+                        <p> <span>Telefone:</span> <?php echo $fornecedor['contato']; ?></p>
                     </div>
                 </div>
-            </article>
-        </section>
-    </main>
+            </section>
+            <section class="card">
+                <div class="grid-title">
+                    <h3>Observações:</h3>
+                </div>
 
+                <div class="grid-info">
+
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/pagamento.png" class="img_fornecedor" />
+                        <p> <span>Condição de pagamento:</span> <?php echo $fornecedor['pagamento_condicacao']; ?></p>
+                    </div>
+
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/pedido_min.png" class="img_fornecedor" />
+                        <p> <span>Pedido minimo:</span> <?php echo $fornecedor['pedido_min']; ?></P>
+                    </div>
+
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/confiabilidade.png" class="img_fornecedor" />
+                        <p> <span>Confiabilidade:</span> <?php echo $fornecedor['confiabilidade']; ?></p>
+                    </div>
+
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/prazo_entrega.png" class="img_fornecedor" />
+                        <p> <span>Prazo de entrega:</span> <?php echo $fornecedor['prazo_entrega']; ?></p>
+                    </div>
+
+                    <div class="text_image_info">
+                        <img src="../IMAGENS/DETALHES FORNECEDOR/check.png" class="img_fornecedor" />
+                        <p> <span>Aceitação de trocas / Devolução:</span> <?php echo $fornecedor['troca_devolucao']; ?>
+                        </p>
+                    </div>
+            </section>
+        </div>
+        </div>
+        <section class="redirecionamento_fornecedor">
+            <h3>Retornar a pagina fornecedores:</h3>
+            <a href="./fornecedores.php" class="voltar_btn">Voltar</a>
+        </section>
+        </form>
+    </main>
 </body>
 
 </html>

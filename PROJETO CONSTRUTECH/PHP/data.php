@@ -359,6 +359,8 @@ $fornecedores_base = [
     [
         'id_2' => 1,
         'fornecedor' => 'Votorantim',
+        'razao_social' => 'Votorantim Cimentos S.A.',
+        'endereco' => 'Av. Paulista, 1000 - São Paulo, SP',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento Itaú, Votomassa',
         'troca_devolucao' => 'Só sacos rasgados no ato',
@@ -374,6 +376,8 @@ $fornecedores_base = [
     [
         'id_2' => 2,
         'fornecedor' => 'Lafarge',
+        'razao_social' => 'Lafarge Brasil S.A.',
+        'endereco' => 'Rua das Flores, 200 - Campinas, SP',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento Lafarge, Areia, Brita',
         'troca_devolucao' => 'Até 30 dias',
@@ -389,6 +393,8 @@ $fornecedores_base = [
     [
         'id_2' => 3,
         'fornecedor' => 'Cimpor',
+        'razao_social' => 'Cimpor Cimentos do Brasil Ltda.',
+        'endereco' => 'Av. Industrial, 300 - Santo André, SP',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento Branco',
         'troca_devolucao' => 'Até 15 dias',
@@ -404,6 +410,8 @@ $fornecedores_base = [
     [
         'id_2' => 4,
         'fornecedor' => 'Quartzolit',
+        'razao_social' => 'Saint-Gobain do Brasil Ltda.',
+        'endereco' => 'Rua Central, 400 - Osasco, SP',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Argamassas',
         'troca_devolucao' => 'Até 20 dias',
@@ -419,6 +427,8 @@ $fornecedores_base = [
     [
         'id_2' => 5,
         'fornecedor' => 'CSN Cimentos',
+        'razao_social' => 'CSN Cimentos Brasil S.A.',
+        'endereco' => 'Av. Brasil, 500 - Rio de Janeiro, RJ',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento CP II',
         'troca_devolucao' => 'Só com nota',
@@ -434,6 +444,8 @@ $fornecedores_base = [
     [
         'id_2' => 6,
         'fornecedor' => 'Holcim',
+        'razao_social' => 'Holcim Brasil S.A.',
+        'endereco' => 'Rua Verde, 600 - Curitiba, PR',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento Holcim',
         'troca_devolucao' => 'Até 20 dias',
@@ -449,6 +461,8 @@ $fornecedores_base = [
     [
         'id_2' => 7,
         'fornecedor' => 'InterCement',
+        'razao_social' => 'InterCement Brasil S.A.',
+        'endereco' => 'Av. das Nações, 700 - São Paulo, SP',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento Estrutural',
         'troca_devolucao' => '15 dias',
@@ -464,6 +478,8 @@ $fornecedores_base = [
     [
         'id_2' => 8,
         'fornecedor' => 'Supremo Cimentos',
+        'razao_social' => 'Supremo Cimentos Ltda.',
+        'endereco' => 'Rua Industrial, 800 - Belo Horizonte, MG',
         'especialidade' => 'base_estrutura',
         'marca_principal' => 'Cimento CP V',
         'troca_devolucao' => '20 dias',
@@ -481,6 +497,8 @@ $fornecedores_base = [
     [
         'id_2' => 9,
         'fornecedor' => 'Amanco Wavin',
+        'razao_social' => 'Amanco Wavin Brasil Ltda.',
+        'endereco' => 'Av. Azul, 900 - São Paulo, SP',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Amanco',
         'troca_devolucao' => '30 dias',
@@ -496,6 +514,8 @@ $fornecedores_base = [
     [
         'id_2' => 10,
         'fornecedor' => 'Tigre',
+        'razao_social' => 'Tigre S.A. Tubos e Conexões',
+        'endereco' => 'Rua dos Plásticos, 100 - Joinville, SC',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Tubos PVC',
         'troca_devolucao' => 'Garantia 36 meses',
@@ -511,6 +531,8 @@ $fornecedores_base = [
     [
         'id_2' => 11,
         'fornecedor' => 'TUPY',
+        'razao_social' => 'Tupy S.A.',
+        'endereco' => 'Av. Fundição, 1100 - Joinville, SC',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Tubulações',
         'troca_devolucao' => '60 dias',
@@ -526,6 +548,8 @@ $fornecedores_base = [
     [
         'id_2' => 12,
         'fornecedor' => 'Deca',
+        'razao_social' => 'Deca Louças Sanitárias S.A.',
+        'endereco' => 'Av. Sanitária, 1200 - São Paulo, SP',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Louças e Metais',
         'troca_devolucao' => '30 dias',
@@ -541,6 +565,8 @@ $fornecedores_base = [
     [
         'id_2' => 13,
         'fornecedor' => 'Docol',
+        'razao_social' => 'Docol Metais Sanitários Ltda.',
+        'endereco' => 'Rua das Águas, 1300 - Joinville, SC',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Torneiras',
         'troca_devolucao' => '45 dias',
@@ -556,6 +582,8 @@ $fornecedores_base = [
     [
         'id_2' => 14,
         'fornecedor' => 'Lorenzetti',
+        'razao_social' => 'Lorenzetti S.A.',
+        'endereco' => 'Av. Elétrica, 1400 - São Paulo, SP',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Chuveiros e aquecedores',
         'troca_devolucao' => '90 dias',
@@ -571,6 +599,8 @@ $fornecedores_base = [
     [
         'id_2' => 15,
         'fornecedor' => 'Fabrimar',
+        'razao_social' => 'Fabrimar Metais Sanitários Ltda.',
+        'endereco' => 'Rua do Bronze, 1500 - Rio de Janeiro, RJ',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Metais sanitários',
         'troca_devolucao' => '30 dias',
@@ -586,6 +616,8 @@ $fornecedores_base = [
     [
         'id_2' => 16,
         'fornecedor' => 'Blukit',
+        'razao_social' => 'Blukit Indústria de Plásticos Ltda.',
+        'endereco' => 'Av. Plástico, 1600 - Blumenau, SC',
         'especialidade' => 'hidraulica_esgoto',
         'marca_principal' => 'Conexões hidráulicas',
         'troca_devolucao' => '60 dias',
@@ -603,6 +635,8 @@ $fornecedores_base = [
     [
         'id_2' => 17,
         'fornecedor' => 'Pisos Porto Ferreira',
+        'razao_social' => 'Porto Ferreira Revestimentos Ltda.',
+        'endereco' => 'Rua Cerâmica, 1700 - Porto Ferreira, SP',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Cerâmicas',
         'troca_devolucao' => '3% quebra',
@@ -618,6 +652,8 @@ $fornecedores_base = [
     [
         'id_2' => 18,
         'fornecedor' => 'Brasital',
+        'razao_social' => 'Brasital Cerâmica Ltda.',
+        'endereco' => 'Av. Revestimento, 1800 - São Paulo, SP',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Azulejos',
         'troca_devolucao' => '100 dias',
@@ -633,6 +669,8 @@ $fornecedores_base = [
     [
         'id_2' => 19,
         'fornecedor' => 'Portobello',
+        'razao_social' => 'Portobello S.A.',
+        'endereco' => 'Av. Porcelanato, 1900 - Tijucas, SC',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Porcelanatos',
         'troca_devolucao' => '60 dias',
@@ -648,6 +686,8 @@ $fornecedores_base = [
     [
         'id_2' => 20,
         'fornecedor' => 'Eliane',
+        'razao_social' => 'Eliane Revestimentos Cerâmicos S.A.',
+        'endereco' => 'Rua Azulejo, 2000 - Criciúma, SC',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Revestimentos',
         'troca_devolucao' => '30 dias',
@@ -663,6 +703,8 @@ $fornecedores_base = [
     [
         'id_2' => 21,
         'fornecedor' => 'Incepa',
+        'razao_social' => 'Incepa Revestimentos Cerâmicos Ltda.',
+        'endereco' => 'Av. Cerâmica, 2100 - Campo Largo, PR',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Pisos e Azulejos',
         'troca_devolucao' => '45 dias',
@@ -678,6 +720,8 @@ $fornecedores_base = [
     [
         'id_2' => 22,
         'fornecedor' => 'Ceusa',
+        'razao_social' => 'Ceusa Revestimentos Cerâmicos Ltda.',
+        'endereco' => 'Rua Premium, 2200 - Urussanga, SC',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Porcelanatos premium',
         'troca_devolucao' => '60 dias',
@@ -693,6 +737,8 @@ $fornecedores_base = [
     [
         'id_2' => 23,
         'fornecedor' => 'Roca',
+        'razao_social' => 'Roca Brasil Cerâmica Ltda.',
+        'endereco' => 'Av. Louças, 2300 - Jundiaí, SP',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Louças e revestimentos',
         'troca_devolucao' => '30 dias',
@@ -708,6 +754,8 @@ $fornecedores_base = [
     [
         'id_2' => 24,
         'fornecedor' => 'Biancogres',
+        'razao_social' => 'Biancogres Cerâmica S.A.',
+        'endereco' => 'Av. Cerâmica, 2400 - Serra, ES',
         'especialidade' => 'revestimentos',
         'marca_principal' => 'Porcelanatos',
         'troca_devolucao' => '45 dias',

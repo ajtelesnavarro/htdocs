@@ -251,6 +251,13 @@ header {
     justify-content: center;
 }
 
+.grid_cadproduto {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
 /* Titulo aba cadastro */
 
 .titulo_cad {
@@ -523,5 +530,108 @@ header {
 
 .busca_marca_produto button:hover {
     background-color: #f77f00;
+    transition: background-color 0.3s ease;
+}
+
+.mini-grid {
+    margin: auto 40px auto 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: #e9e9e9;
+    border: 1px solid #00000013;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card h3, .grid-info h3 {
+    margin: 0 auto;
+}
+
+.grid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.titulo_fornecedor {
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+
+
+.img_fornecedor {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.text_image_info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.text_image_info p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 19px;
+}
+.text_image_info p span {
+    font-weight: bold;
+}
+
+.grid-title {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+.titulo_fornecedor {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.redirecionamento_fornecedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.redirecionamento_fornecedor h3 {
+    margin-top: 230px;
+   font-family: 'Noto Sans', sans-serif;
+   font-size: 22px; 
+}
+
+.voltar_btn {
+    background-color: #003049;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 2px solid #003049;
+    text-decoration: none;
+    font-size: 25px;
+    box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.25);
+}
+
+.voltar_btn:hover {
+    background-color: whitesmoke;
+    color: #003049;
+    border: 2px solid #003049;
+    box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.4);
     transition: background-color 0.3s ease;
 }
