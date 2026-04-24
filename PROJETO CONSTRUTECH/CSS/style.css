@@ -1,9 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #ededed;
     margin: 0;
 }
 
 nav {
+    height: 150px;
     background-color: #003049;
     display: flex;
     justify-content: space-between;
@@ -55,7 +62,7 @@ header {
 
 .conteudo {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     margin-top: 15px;
@@ -241,12 +248,11 @@ header {
 /*Caixa de cadastro*/
 .cadbox {
     width: 890px;
-    height: 600px;
+    min-height: 600px;
     background-color: #f6e3a2;
     padding: 70px;
     box-sizing: border-box;
     border-radius: 25px;
-    margin: 80px auto;
     box-shadow: 8px 6px 10px rgba(128, 128, 128, 0.555);
     display: flex;
     align-items: center;
@@ -277,6 +283,7 @@ header {
 
 /*Botão de enviar*/
 .buttoncad2 {
+    padding: 9px 12px;
     margin-top: 15px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
@@ -284,10 +291,9 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
-    width: 150px;
-    height: 45px;
     text-align: center;
     background-color: #003049;
+    border: 2px solid #003049;
     color: white;
     font-size: 18px;
     border-radius: 10px;
@@ -300,8 +306,6 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
-    width: 150px;
-    height: 45px;
     text-align: center;
     background-color: white;
     border: 2px solid #003049;

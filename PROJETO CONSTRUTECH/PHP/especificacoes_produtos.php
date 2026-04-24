@@ -28,7 +28,7 @@ $precoTotal = isset($produto['preco_total']) ? $produto['preco_total'] : ($produ
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Editar Produto</title>
+    <title>Detalhe do Produto</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>

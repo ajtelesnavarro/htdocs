@@ -28,7 +28,7 @@ if ($index !== false) {
     <link
         href="https://fonts.googleapis.com/css2?family=Electrolize&family=Outfit:wght@100..900&family=Palette+Mosaic&family=Wellfleet&display=swap"
         rel="stylesheet">
-    <title>Cadastro de Produtos</title>
+    <title>Detalhe do fornecedor: <?php echo $fornecedor['fornecedor']; ?></title>
     <link rel="stylesheet" href="../CSS/style.CSS">
 </head>
 

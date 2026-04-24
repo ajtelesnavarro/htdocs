@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link
         href="https://fonts.googleapis.com/css2?family=Electrolize&family=Outfit:wght@100..900&family=Palette+Mosaic&family=Wellfleet&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
     <title>Cadastro de Produtos</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
@@ -53,77 +54,72 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once 'partials/header.php';
     ?>
 
-    <main>
-        <section>
-            <!--Caixa do cadastro-->
+    <section class="conteudo">
+        <!--Caixa do cadastro-->
 
-            <article class="cadbox">
-                <!--Formulário-->
-<form class="container_fornecedores_especificacoes_dados" 
-      action="cadastrar_produtos.php" 
-      method="POST"
-      enctype="multipart/form-data">
+        <article class="cadbox">
+            <!--Formulário-->
+            <form class="container_fornecedores_especificacoes_dados" action="cadastrar_produtos.php" method="POST"
+                enctype="multipart/form-data">
 
-    <h2 class="titulo_cad">Cadastro de Produtos</h2>
+                <h2 class="titulo_cad">Cadastro de Produtos</h2>
 
-    <div class="form-grid">
+                <div class="form-grid">
 
-        <!-- linha 1 -->
-        <div class="input-group">
-            <label for="nome">Nome do Produto</label>
-            <input type="text" id="nome" name="nome" required />
-        </div>
+                    <!-- linha 1 -->
+                    <div class="input-group">
+                        <label for="nome">Nome do Produto</label>
+                        <input type="text" id="nome" name="nome" required />
+                    </div>
 
-        <div class="input-group">
-            <label for="categoria">Categoria</label>
-            <select id="categoria" name="categoria" required>
-                <option value="" disabled selected>Selecione</option>
-                <option value="bruto">Bruto</option>
-                <option value="ferramentas">Ferramentas</option>
-                <option value="acabamento">Acabamento</option>
-            </select>
-        </div>
+                    <div class="input-group">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="bruto">Bruto</option>
+                            <option value="ferramentas">Ferramentas</option>
+                            <option value="acabamento">Acabamento</option>
+                        </select>
+                    </div>
 
-        <div class="input-group">
-            <label for="quantidade_minima">Qtd. Mínima</label>
-            <input type="number" id="quantidade_minima" name="quantidade_minima" required min="1" />
-        </div>
+                    <div class="input-group">
+                        <label for="quantidade_minima">Qtd. Mínima</label>
+                        <input type="number" id="quantidade_minima" name="quantidade_minima" required min="1" />
+                    </div>
 
-        <!-- linha 2 -->
-        <div class="input-group">
-            <label for="quantidade_atual">Quantidade Atual</label>
-            <input type="number" id="quantidade_atual" name="quantidade_atual" required min="1" />
-        </div>
+                    <!-- linha 2 -->
+                    <div class="input-group">
+                        <label for="quantidade_atual">Quantidade Atual</label>
+                        <input type="number" id="quantidade_atual" name="quantidade_atual" required min="1" />
+                    </div>
 
-        <div class="input-group">
-            <label for="marca">Marca</label>
-            <input type="text" id="marca" name="marca" required />
-        </div>
+                    <div class="input-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" required />
+                    </div>
 
-        <div class="input-group">
-            <label for="preco_unitario">Preço Unitário (R$)</label>
-            <input type="number" id="preco_unitario" name="preco_unitario" step="0.01" required min="0" />
-        </div>
+                    <div class="input-group">
+                        <label for="preco_unitario">Preço Unitário (R$)</label>
+                        <input type="number" id="preco_unitario" name="preco_unitario" step="0.01" required min="0" />
+                    </div>
 
-        <!-- imagem -->
-        <div class="input-group imagem-box">
-            <label>Imagem do Produto</label>
+                    <!-- imagem -->
+                    <div class="input-group imagem-box">
+                        <label>Imagem do Produto</label>
 
-            <div class="box-imagem">
-                <input type="file" name="imagem">
-            </div>
-        </div>
+                        <div class="box-imagem">
+                            <input type="file" name="imagem">
+                        </div>
+                    </div>
 
-    </div>
+                </div>
 
-    <button type="submit" class="buttoncad2">Cadastrar Produto</button>
+                <button type="submit" class="buttoncad2">Cadastrar Produto</button>
 
-</form>
-            </article>
+            </form>
+        </article>
 
-        </section>
-
-    </main>
+    </section>
 </body>
 
 </html>
