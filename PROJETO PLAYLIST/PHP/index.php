@@ -31,15 +31,9 @@ $musicas = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 <th>Duração</th>
             </tr>
 
-TENHO QUE FAZER OS DETALHES DE CADA MÚSICA, COMO NOME, ARTISTA, GÊNERO E DURAÇÃO, 
-PARA CADA MÚSICA QUE FOR ENCONTRADA NA PESQUISA. 
-CRIAR UM HTML PRIMEIRO PRA DPS ADD PHP
-CLOCAR UM <A></A> NO TD DA MUSICA
-COLOCAR O ? COM O GET/POST ESQUECI
-
 <?php foreach ($musicas as $musica) {
     print'            <tr>
-                <td><a href="detalhe_musica.php?id='. $musica['id_musica'] . '">' . $musica['nome_musica'] . '</td>
+                <td><a href="detalhe_musica.php?id='. $musica['id_musica'] . '" class="botao-msc">' . $musica['nome_musica'] . '</td>
                 <td>' . $musica['cantor_musica'] . '</td>
                 <td>' . $musica['categoria_musica'] . '</td>
                 <td>' . $musica['duracao_musica'] . '</td>
