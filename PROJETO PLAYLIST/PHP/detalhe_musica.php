@@ -19,7 +19,7 @@ $musica = read($pdo, 'exercicio_playlist', 'id_musica = ' . (int) $_GET['id']);
 ?>
 
 <body>
-    <section class="conteudo">
+    <section class="conteudo-pequeno">
         <div class="personalizacao-detmus">
             <h2 class="titulo-detmus">Detalhes da Música</h2>
             <div class="text-detmus">
@@ -31,13 +31,17 @@ $musica = read($pdo, 'exercicio_playlist', 'id_musica = ' . (int) $_GET['id']);
             <p><strong>Duração:</strong> ' . $musica['duracao_musica'] . '</p>'
                     ?>
             </div>
+            <div class="botaoaa">
+                <form method="POST">
+                    <input type="hidden" name="id_musica" value="<?= $musica['id_musica'] ?>">
+                    <a href="index.php" class="botao-detmus">Voltar</a>
+                    <a href="atualizar_musica.php?id=<?= $musica['id_musica'] ?>" class="botao-detmus">Editar Música</a>
+                    <button type="submit" class="botao-detmus">Excluir Música</button>
+                </form>
+            </div>
         </div>
 
-        <form method="POST">
-            <input type="hidden" name="id_musica" value="<?= $musica['id_musica'] ?>">
-            <a href="index.php" class="botao-detmus">Voltar para a Lista de Músicas</a>
-            <button type="submit" class="botao-detmus">Excluir Música</button>
-        </form>
+
 
     </section>
 </body>
