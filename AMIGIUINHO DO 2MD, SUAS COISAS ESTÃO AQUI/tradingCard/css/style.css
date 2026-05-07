@@ -1,0 +1,280 @@
+/* RESET básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO GERAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #121212; /* escuro, mas não preto */
+    color: #eaeaea;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+a[href="form.php"] {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 10px 15px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+a[href="form.php"]:hover {
+    background: #3a3a3a;
+}
+
+/* GRID DE CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: #1b1b1b;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.25s;
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* NOME */
+.card p {
+    font-size: 14px;
+}
+
+/* HOVER BONITO */
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: #242424;
+}
+
+
+
+/* FORMULÁRIO */
+.form-card {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* LABEL */
+.form-card label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px; /* ajusta altura */
+}
+
+/* INPUTS */
+.form-card input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #2a2a2a;
+    color: #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* FOCUS */
+.form-card input:focus {
+    background: #333;
+}
+
+/* FILE INPUT */
+.form-card input[type="file"] {
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* BOTÃO */
+
+.form-card button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-card button:hover {
+    background: #3a3a3a;
+    transform: scale(1.02);
+}
+
+/* BOTÃO VOLTAR */
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.back:hover {
+    color: #fff;
+}
+
+/* CARD BASE */
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1b1b1b;
+}
+
+/* LINK ocupa tudo */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXTO */
+.card p {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* OVERLAY ESCURO */
+.delete-form {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: 0.25s;
+}
+
+/* BOTÃO LIXEIRA */
+.delete-btn {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: 0.2s;
+}
+
+/* HOVER */
+.card:hover .delete-form {
+    opacity: 1;
+}
+
+/* animação do botão */
+.card:hover .delete-btn {
+    transform: scale(1);
+}
+
+/* CARD DE DETALHES */
+.details-card {
+    display: flex;
+    gap: 30px;
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+/* IMAGEM */
+.details-card img {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* INFO */
+.details-card .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* TÍTULO */
+.details-card h1 {
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.details-card p {
+    color: #ccc;
+}
+
+/* BOTÃO VOLTAR */
+.back {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.2s;
+}
+
+.back:hover {
+    color: #fff;
+}
